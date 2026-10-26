@@ -1,0 +1,26 @@
+-----------
+LISP Manual
+-----------
+Everything is an expression. Expression is either an atom or a list. An atom is a sequence of symbols.
+A list is a sequence of expressions separated by a space and wrapped in parentheses. The first element
+of a list (a. k. a. head) is an operator, and the remaining ones (a. k. a. tail) are the arguments. 
+
+Here are all the predefined primitive operators:
+
+(1) (quote x) returns x "as is". 'x is a syntactic sugar for quoting x.
+(2) (atom x) returns t if x is an atom. Otherwise returns () (an empty list). Atoms t and () are
+used to represent true and false values respectively.
+(3) (eq x y) returns t if x and y are the same atom, and () otherwise.
+(4) (car x) expects x to be a list and returns its head.
+(5) (cdr x) expects x to be a list and returns its tail (also a list).
+(6) (cons x y) expects y to be a list and returns a list where value of x is head and value of y is
+tail.
+(7) (cond (p1 e1) ... (pn en)) evaluates pk until it returns t at some k. Then ek is returned as a value
+of an expression.
+(8) (lambda (p1 .. pn) e) returns an operator that takes n parameters, substitutes them into expression e
+and evaluates the whole thing.
+(9) (label f (lambda (p1 ... pn) e)) is same as (8) but now the operator gets a name f. It makes it
+possible to have operator used inside itself, thus giving a recursion.
+
+Not enough? This whole thing is Turing complete, so you have theoretically got everything you may need.
+Happy LISP hacking!

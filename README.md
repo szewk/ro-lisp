@@ -1,6 +1,8 @@
 # Ro-LISP: minimal interpreter for LISP S-expressions
 
-## Usage
+This interpreter follows Paul Graham's article `Roots of LISP'. https://paulgraham.com/rootsoflisp.html
+
+# Usage
 
 ```bash
 python3 main.py
